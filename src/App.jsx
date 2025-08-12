@@ -13,9 +13,7 @@ import ManageInstructors from './pages/admin/ManageInstructors';
 import StudentDashboard from './pages/student/StudentDashboard';
 import StudentLayout from './pages/student/StudentLayout';
 import EnrolledCourses from './pages/student/EnrolledCourses';
-
 import UpcomingExams from './pages/student/UpcomingExams';
-
 import PreviousResults from './pages/student/PreviousResults';
 import Profile from './pages/student/Profile';
 import StudentAnalytics from './pages/student/studentAnalytics';
@@ -33,6 +31,8 @@ import MonitorExams from './pages/instructor/MonitorExams';
 import AddQuestion from './pages/instructor/AddQuestion';
 import StudentPerformance from './pages/instructor/StudentPerformance';
 import ViewStudentProfile from './pages/instructor/ViewStudentProfile';
+import AddUser from './pages/admin/AddUser';
+import EditUser from './pages/admin/EditUser';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -54,6 +54,8 @@ function App() {
         <Route path="/admin/manage-users" element={<ManageUsers />} />
         <Route path="/admin/manage-questions" element={<ManageQuestions />} />
         <Route path="/admin/manage-instructors" element={<ManageInstructors />} />
+        <Route path="/admin/add-user" element={<AddUser />} />
+        <Route path="/admin/edit-user/:userId" element={<EditUser />} />
         <Route path="/student" element={<StudentLayout><StudentDashboard /></StudentLayout>} />
         <Route path="/student/dashboard" element={<StudentLayout><StudentDashboard /></StudentLayout>} />
         <Route path="/student/enrolled-courses" element={<StudentLayout><EnrolledCourses /></StudentLayout>} />
